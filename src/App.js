@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Route, Router } from 'react-router-dom';
 import Login from './components/Login';
 import Register from './components/Register';
 import CRUDForm from './components/CRUDForm';
@@ -7,11 +7,12 @@ import CRUDForm from './components/CRUDForm';
 function App() {
   return (
     <div className="min-h-screen bg-gray-100">
-   <Routes>
+      {/* <Login/> */}
+   <Router>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/crud" element={<CRUDForm />} />
-      </Routes>
+      </Router>
     </div>
   );
 }
